@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<link rel="stylesheet" href="style.css">
+<body>
+
+<div ng-app="mainApp" ng-controller="Studentform">
+  <h2>Registration Form By Using Angular JS</h2>
+    <hr>
+    <br>
+    First Name :<input type="text" ng-model="Student.firstname" class="name">
+    <br><br>
+    Last Name : <input type="text" ng-model="Student.lastname" class="name">
+    <br><br>
+    Username : <input type="text" ng-model="Student.Username" class="name">
+    <br><br>
+    Password : <input type="password" ng-model="Student.password" class="name">
+    <br><br>
+
+    Display : <br><br>Full Name: {{Student.firstname}}  {{Student.lastname}} <br><br> Username: {{Student.Username}} <br><br> Password: {{Student.password}}
+</div>
+
+<script>
+    var myApp = angular.module('mainApp', []);
+    myApp.controller('Studentform', function($scope) {
+       
+        $scope.Student = {
+            firstname: "",
+            lastname: "",
+            Username: "",
+            password: ""
+        };
+    });
+</script>
+
+</body>
+</html>
